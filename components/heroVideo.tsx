@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="hero-section relative -top-14">
+    <div className="hero-section relative md:-top-12 -top-5">
       <div className="video-container max-h-[80vh] overflow-hidden">
         <video loop autoPlay muted className="w-full h-auto">
           <source src={selectedVideo} type="video/mp4" />
