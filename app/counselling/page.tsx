@@ -46,7 +46,7 @@ const counselingServices = [
     <div className="max-w-[100vw]">
       <>
         {/* component */}
-        <div className=" bg-purple-800 flex items-center md:px-12 px-5 text-white">
+        <div className=" bg-purple-800 dark:bg-purple-900 flex items-center md:px-12 px-5 text-white">
           <section className="bg-cover bg-center py-24 w-full">
             <div className="container mx-auto text-left dark:text-white">
               <div className="flex items-center mb-5 flex-col md:flex-row">
