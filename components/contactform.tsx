@@ -1,4 +1,5 @@
 // @ts-nocheck
+'use client'
 
 import React from "react";
 import {
@@ -17,6 +18,84 @@ import { Select, SelectItem } from "@nextui-org/react";
 
 export default function ContactForm() {
   const [selected, setSelected] = React.useState("login");
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+    concern: "",
+    gender: "",
+  });
+  const [formData2, setFormData2] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+    timings: "",
+    gender: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.status === 201) {
+        // Handle successful submission, e.g., show a success message or redirect
+        console.log("Form submitted successfully!");
+      } else {
+        // Handle errors, e.g., show an error message
+        console.error("Form submission failed.");
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+    const handleSubmit2 = async (e) => {
+      e.preventDefault();
+
+      try {
+        const response = await fetch("/api/call", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData2),
+        });
+
+        if (response.status === 201) {
+          // Handle successful submission, e.g., show a success message or redirect
+          console.log("Form submitted successfully!");
+        } else {
+          // Handle errors, e.g., show an error message
+          console.error("Form submission failed.");
+        }
+      } catch (error) {
+        console.error("Error submitting the form:", error);
+      }
+    };
+
+    const handleInputChange2 = (e) => {
+      const { name, value } = e.target;
+      setFormData2({
+        ...formData2,
+        [name]: value,
+      });
+    };
 
   const AllSexualAndGenderIdentities = [
     // LGBTQIA+
@@ -191,32 +270,53 @@ export default function ContactForm() {
             onSelectionChange={setSelected}
           >
             <Tab key="call" title="Get Call Support">
-              <form className="flex flex-col gap-4">
+              <form
+                className="flex flex-col gap-4 h-max"
+                onSubmit={handleSubmit2}
+              >
                 <Input
                   isRequired
                   label="Name"
                   placeholder="Enter your name"
                   type="text"
+                  name="name"
+                  value={formData2.name}
+                  onChange={handleInputChange2}
                 />
                 <Input
                   isRequired
                   label="Email"
                   placeholder="Enter your email"
                   type="email"
+                  name="email"
+                  value={formData2.email}
+                  onChange={handleInputChange2}
                 />
                 <Input
                   isRequired
                   label="Phone"
                   placeholder="Enter your Phone Number"
                   type="text"
+                  name="phone"
+                  value={formData2.phone}
+                  onChange={handleInputChange2}
                 />
                 <Input
                   isRequired
                   label="Timings"
-                  placeholder="Enter your Connect Timings"
+                  placeholder="Enter your timings"
                   type="text"
+                  name="timings"
+                  value={formData2.timings}
+                  onChange={handleInputChange2}
                 />
-                <Select label="Select a gender identity" className="max-w-xs">
+                <Select
+                  label="Select a gender identity"
+                  className="max-w-xs"
+                  name="gender"
+                  value={formData2.gender}
+                  onChange={handleInputChange2}
+                >
                   {AllSexualAndGenderIdentities.map((identity) => (
                     <SelectItem key={identity.value} value={identity.value}>
                       {identity.label}
@@ -227,39 +327,60 @@ export default function ContactForm() {
                   Discuss your concern with us
                 </p>
                 <div className="flex gap-2 justify-end">
-                  <Button fullWidth color="secondary">
+                  <Button fullWidth color="secondary" type="submit">
                     Bliss Up
                   </Button>
                 </div>
               </form>
             </Tab>
             <Tab key="book" title="Book Session">
-              <form className="flex flex-col gap-4 h-max">
+              <form
+                className="flex flex-col gap-4 h-max"
+                onSubmit={handleSubmit}
+              >
                 <Input
                   isRequired
                   label="Name"
                   placeholder="Enter your name"
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                 />
                 <Input
                   isRequired
                   label="Email"
                   placeholder="Enter your email"
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                 />
                 <Input
                   isRequired
                   label="Phone"
                   placeholder="Enter your Phone Number"
                   type="text"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
                 />
                 <Input
                   isRequired
                   label="Concern"
                   placeholder="Enter your Concern"
                   type="text"
+                  name="concern"
+                  value={formData.concern}
+                  onChange={handleInputChange}
                 />
-                <Select label="Select a gender identity" className="max-w-xs">
+                <Select
+                  label="Select a gender identity"
+                  className="max-w-xs"
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleInputChange}
+                >
                   {AllSexualAndGenderIdentities.map((identity) => (
                     <SelectItem key={identity.value} value={identity.value}>
                       {identity.label}
@@ -270,7 +391,7 @@ export default function ContactForm() {
                   Discuss your concern with us
                 </p>
                 <div className="flex gap-2 justify-end">
-                  <Button fullWidth color="secondary">
+                  <Button fullWidth color="secondary" type="submit">
                     Bliss Up
                   </Button>
                 </div>
