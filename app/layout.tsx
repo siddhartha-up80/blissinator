@@ -32,24 +32,22 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" suppressHydrationWarning>
-			<head />
-			<body
-				className={clsx(
-					"min-h-screen bg-background font-sans antialiased",
-					fontSans.variable
-				)}
-			>
-				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="relative flex flex-col">
-						<Navbar />
-						<main className=" mx-auto max-w-[90rem] flex-grow">
-							{children}
-						</main>
-						<Footer/>
-					</div>
-				</Providers>
-			</body>
-		</html>
-	);
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body
+        className={clsx(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+          <div className="relative flex flex-col min-h-[100vh]">
+            <Navbar />
+            <main className=" mx-auto max-w-[90rem] flex-grow">{children}</main>
+            <Footer />
+          </div>
+        </Providers>
+      </body>
+    </html>
+  );
 }

@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="">
       <Link
         className="w-full flex items-center justify-center py-3 bg-purple-50 text-sm"
         href="https://blissinator.vercel.app"

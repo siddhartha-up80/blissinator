@@ -10,19 +10,19 @@ const videoSources: string[] = [
 
 const HeroSection: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<string>(
-    videoSources[1]
+    videoSources[Math.floor(Math.random() * 3)]
   );
 
   // Function to select a random video source
-  const selectRandomVideo = () => {
-    const randomIndex = Math.floor(Math.random() * videoSources.length);
-    setSelectedVideo(videoSources[randomIndex]);
-  };
+  // const selectRandomVideo = () => {
+  //   const randomIndex = Math.floor(Math.random() * videoSources.length);
+  //   setSelectedVideo(videoSources[randomIndex]);
+  // };
 
-  useEffect(() => {
-    // Initial random video selection when the component mounts
-    selectRandomVideo();
-  }, []);
+  // useEffect(() => {
+  //   // Initial random video selection when the component mounts
+  //   selectRandomVideo();
+  // }, []);
 
   return (
     <div className="hero-section relative md:-top-12 -top-5">

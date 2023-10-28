@@ -6,7 +6,7 @@ export const siteConfig = {
   navItems: [
     {
       label: "Counselling",
-      href: "/councelling",
+      href: "/counselling",
     },
     {
       label: "About",
@@ -33,10 +33,7 @@ export const siteConfig = {
       label: "Join Us",
       href: "/join-us",
     },
-    {
-      label: "Corporate",
-      href: "/corporate",
-    },
+
     {
       label: "Contact Us",
       href: "/contact-us",
@@ -45,7 +42,7 @@ export const siteConfig = {
   navMenuItems: [
     {
       label: "Counselling",
-      href: "/councelling",
+      href: "/counselling",
     },
     {
       label: "About",
@@ -72,10 +69,7 @@ export const siteConfig = {
       label: "Join Us",
       href: "/join-us",
     },
-    {
-      label: "Corporate",
-      href: "/corporate",
-    },
+
     {
       label: "Contact Us",
       href: "/contact-us",
