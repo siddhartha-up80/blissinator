@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 let isConnected = false; // track the connection
 
 export const connectToDB = async () => {
-  mongoose.set("strictQuery", true);
+  mongoose.set("strictQuery", true); // You can change "strictQuery" to a valid option
 
   if (isConnected) {
     console.log("MongoDB is already connected");
@@ -11,16 +11,14 @@ export const connectToDB = async () => {
   }
 
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: "blissinator",
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(
+      process.env.MONGODB_URI || "" 
+    );
 
     isConnected = true;
 
     console.log("MongoDB connected");
   } catch (error) {
-    console.log(error);
+    console.error("Error connecting to MongoDB:", error);
   }
 };
