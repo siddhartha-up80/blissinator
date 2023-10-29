@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Image, Button } from "@nextui-org/react";
+import Link from "next/link";
+
 
 const Intro = () => {
   const list = [
@@ -400,6 +402,30 @@ const Intro = () => {
         </section>
       </>
       {/* features section */}
+
+      <>
+        {/* book now secion */}
+        <div className="w-full   bg-purple-800 shadow-xl shadow-indigo-200 py-10 px-20 flex justify-between items-center">
+          <p className=" text-white">
+            {" "}
+            <span className="text-4xl font-medium">
+              Still Confused ? Try us once !
+            </span>{" "}
+            <br />{" "}
+            <span className="text-lg">Book your Consultation Today ! </span>
+          </p>
+          <Link href="/counselling">
+            {" "}
+            <Button
+              fullWidth
+              className="py-4 px-12 rounded-lg font-medium text-white shadow-xl  hover:bg-purple-200 hover:text-gray-800 duration-150  bg-purple-500"
+            >
+              Read More{" "}
+            </Button>
+          </Link>
+        </div>
+        {/* book now secion */}
+      </>
     </div>
   );
 };

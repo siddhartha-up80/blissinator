@@ -21,6 +21,10 @@ const SessionSchema = new Schema({
   gender: {
     type: String,
   },
+
+  filename: {
+    type: String,
+  }
 });
 
 const Session = models.Session || model("Session", SessionSchema);

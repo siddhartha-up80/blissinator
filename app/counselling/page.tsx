@@ -1,12 +1,20 @@
 'use client'
 
 import React from 'react'
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Image, Button } from "@nextui-org/react";
 import TabsComponent from '@/components/tabs/tabs';
 import { Chip } from "@nextui-org/react";
 import ContactForm from '@/components/contactform';
+import Link from 'next/link';
+import Head from 'next/head';
+
+
+
+
 
 const Page = () => {
+
+
 
 const topics = [
   "Depression",
@@ -20,30 +28,20 @@ const topics = [
   "Job/Career concerns",
 ];
 
-const counselingServices = [
-  {
-    title: "Individual Counseling",
-    description:
-      "One-on-one counseling to address your personal mental health needs.",
-  },
-  {
-    title: "Relationship Counseling",
-    description:
-      "Counseling to improve communication and resolve issues in your relationships.",
-  },
-  {
-    title: "Addiction Counseling",
-    description:
-      "Support and guidance to overcome alcohol or substance addiction.",
-  },
-  {
-    title: "Trauma Counseling",
-    description: "Help to cope with and recover from traumatic experiences.",
-  },
-];
+
+
 
   return (
     <div className="max-w-[100vw]">
+      <Head>
+        <title>
+          Blissinator | Mental Health Counseling for Students and Everyone
+        </title>
+        <meta
+          name="description"
+          content="Your trusted destination for professional mental health counseling. We offer students, individuals and relationship people counseling services, helping you improve your emotional well-being. Get the support you need to lead a happier and more fulfilling life."
+        />
+      </Head>
       <>
         {/* component */}
         <div className=" bg-purple-800 dark:bg-purple-900 flex items-center md:px-12 px-5 text-white">
@@ -64,10 +62,10 @@ const counselingServices = [
                     consultation with experts of your choice
                   </p>
                   <a
-                    href="#"
+                    href="#session"
                     className="bg-purple-500 text-white py-4 px-12 rounded-lg hover:bg-purple-600"
                   >
-                    Demo
+                    Bliss Up Now
                   </a>
                 </div>
                 <div className="md:w-1/2 md:pl-16 py-10">
@@ -253,35 +251,163 @@ const counselingServices = [
 
       {/* book session */}
       <>
-        <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
-          <div className="grid lg:grid-cols-2 lg:items-center">
-            <div className="lg:col-start-2">
-              <h3 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10 text-center dark:text-gray-50">
-                Get your counselling done with us
-              </h3>
+        <div id="session" className="py-5 mx-auto space-y-24 ">
+          {/* instructions  */}
+          <section className=" bg-purple-800 dark:bg-purple-900 dark:text-gray-100 text-white ">
+            <div className="container max-w-5xl px-4 py-12 mx-auto">
+              <div className="grid gap-4 mx-4 sm:grid-cols-12">
+                <div className="col-span-12 sm:col-span-3">
+                  <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-purple-400">
+                    <h3 className="text-3xl font-semibold">
+                      Book Session or Get a call support
+                    </h3>
+                    <span className="text-sm font-bold tracki uppercase dark:text-gray-400">
+                      the choice is yours
+                    </span>
+                    <Link href="#form">
+                      <Button
+                        fullWidth
+                        className="mt-5 bg-purple-500 text-white"
+                      >
+                        Book Now
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+                  <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
+                    <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-purple-400">
+                      <h3 className="text-xl font-semibold tracki">
+                        Fill the form on the "Get Call Support" tab.
+                      </h3>
 
-              <div className="grid grid-cols-2 gap-y-10 gap-x-6 ">
-                {counselingServices.map((service, index) => (
-                  <Card key={index}>
-                    <CardBody>
-                      <h2 className="text-xl font-bold">{service.title}</h2>
-                      <ul className=''>
-                        {" "}
-                        <li className="text-gray-600 list-outside list-disc ml-6">
-                          {service.description}
-                        </li>
-                      </ul>
-                    </CardBody>
-                  </Card>
-                ))}
+                      <p className="mt-3">
+                        Fill out the form with your name, email, phone number,
+                        preferred call timings, and select your gender identity.
+                        Click the "Bliss Up" button to request call support. Our
+                        team will get in touch with you shortly.
+                      </p>
+                    </div>
+                    <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-purple-400">
+                      <h3 className="text-xl font-semibold tracki">
+                        If You Want to Book a Session: Fill the form on "Book
+                        Session" tab.
+                      </h3>
+
+                      <p className="mt-3">
+                        Fill out the form with your name, email, phone number,
+                        your concern or reason for the session, and select your
+                        gender identity. Click the "Bliss Up" button to book a
+                        session.
+                      </p>
+                    </div>
+                    <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-purple-400">
+                      <h3 className="text-xl font-semibold tracki">
+                        Upload Previous medical Document for our reference if
+                        you want
+                      </h3>
+
+                      <p className="mt-3">
+                        You can also upload any previous medical documents or
+                        relevant files to provide more information and aid in
+                        the diagnosis. Our team will confirm your session and
+                        may follow up for further details.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1 md:w-[30vw] md:mx-20">
+          </section>
+          {/* instructions  */}
+
+          <div className="grid lg:grid-cols-2 lg:items-center container max-w-xl lg:px-8 lg:max-w-7xl p-6">
+            <div className="lg:col-start-2">
+              <h3 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10 text-center dark:text-gray-50">
+                Get your counseling done with us
+              </h3>
+
+              <div className="grid grid-cols-2 gap-y-10 gap-x-6">
+                {/* Counseling Services */}
+                <Card>
+                  <CardBody>
+                    <h2 className="text-xl font-bold">Individual Counseling</h2>
+                    <ul className="">
+                      <li className="text-gray-600 dark:text-gray-100">
+                        Experience personalized, one-on-one counseling to
+                        address your unique mental health concerns and journey
+                        towards well-being.
+                      </li>
+                    </ul>
+                  </CardBody>
+                </Card>
+
+                <Card>
+                  <CardBody>
+                    <h2 className="text-xl font-bold">
+                      Relationship Counseling
+                    </h2>
+                    <ul className="">
+                      <li className="text-gray-600 dark:text-gray-100">
+                        Improve communication, deepen connections, and resolve
+                        issues in your relationships with our expert counseling
+                        support.
+                      </li>
+                    </ul>
+                  </CardBody>
+                </Card>
+
+                <Card>
+                  <CardBody>
+                    <h2 className="text-xl font-bold">Addiction Counseling</h2>
+                    <ul className="">
+                      <li className="text-gray-600 dark:text-gray-100">
+                        Receive compassionate support and guidance to overcome
+                        alcohol or substance addiction and take steps towards a
+                        healthier life.
+                      </li>
+                    </ul>
+                  </CardBody>
+                </Card>
+
+                <Card>
+                  <CardBody>
+                    <h2 className="text-xl font-bold">Trauma Counseling</h2>
+                    <ul className="">
+                      <li className="text-gray-600 dark:text-gray-100">
+                        Heal and regain control by seeking professional help to
+                        cope with and recover from traumatic experiences that
+                        have impacted your mental health.
+                      </li>
+                    </ul>
+                  </CardBody>
+                </Card>
+
+                {/* Add more counseling services here using the same pattern */}
+                {/* Example:
+          <Card>
+            <CardBody>
+              <h2 className="text-xl font-bold">Service Title</h2>
+              <ul className="">
+                <li className="text-gray-600">
+                  Description of the service.
+                </li>
+              </ul>
+            </CardBody>
+          </Card>
+          */}
+              </div>
+            </div>
+            <div
+              id="form"
+              className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1 md:w-[30vw] md:mx-20"
+            >
               <ContactForm />
             </div>
           </div>
         </div>
       </>
+
       {/* book session */}
     </div>
   );

@@ -1,8 +1,9 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Blissinator | Mental Health Counseling for Students and Everyone",
+  description:
+    "Your trusted destination for professional mental health counseling. We offer students, individuals and relationship people counseling services, helping you improve your emotional well-being. Get the support you need to lead a happier and more fulfilling life.",
   navItems: [
     {
       label: "Counselling",

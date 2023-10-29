@@ -1,5 +1,5 @@
 // @ts-nocheck
-'use client'
+"use client";
 
 import React from "react";
 import {
@@ -14,16 +14,17 @@ import {
 } from "@nextui-org/react";
 import { Select, SelectItem } from "@nextui-org/react";
 
-
-
 export default function ContactForm() {
   const [selected, setSelected] = React.useState("login");
+  const [file, setFile] = React.useState();
+
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
     phone: "",
     concern: "",
     gender: "",
+    filename: "",
   });
   const [formData2, setFormData2] = React.useState({
     name: "",
@@ -36,12 +37,33 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (file) formData.filename = file.name;
+    //  console.log(file)
+    // console.log(formData);
     try {
+      if (file) formData.filename = file.name;
+
+      if (file) {
+        const data = new FormData();
+        data.set("file", file);
+
+        const result = await fetch("/api/fileupload", {
+          method: "POST",
+          body: data,
+        });
+        if (result.status === 201) {
+          // Handle successful submission, e.g., show a success message or redirect
+          console.log("File submitted successfully!");
+        }
+      }
+
       const response = await fetch("/api/session", {
+        //
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+
         body: JSON.stringify(formData),
       });
 
@@ -65,37 +87,37 @@ export default function ContactForm() {
     });
   };
 
-    const handleSubmit2 = async (e) => {
-      e.preventDefault();
+  const handleSubmit2 = async (e) => {
+    e.preventDefault();
 
-      try {
-        const response = await fetch("/api/call", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData2),
-        });
-
-        if (response.status === 201) {
-          // Handle successful submission, e.g., show a success message or redirect
-          console.log("Form submitted successfully!");
-        } else {
-          // Handle errors, e.g., show an error message
-          console.error("Form submission failed.");
-        }
-      } catch (error) {
-        console.error("Error submitting the form:", error);
-      }
-    };
-
-    const handleInputChange2 = (e) => {
-      const { name, value } = e.target;
-      setFormData2({
-        ...formData2,
-        [name]: value,
+    try {
+      const response = await fetch("/api/call", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData2),
       });
-    };
+
+      if (response.status === 201) {
+        // Handle successful submission, e.g., show a success message or redirect
+        console.log("Form submitted successfully!");
+      } else {
+        // Handle errors, e.g., show an error message
+        console.error("Form submission failed.");
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+    }
+  };
+
+  const handleInputChange2 = (e) => {
+    const { name, value } = e.target;
+    setFormData2({
+      ...formData2,
+      [name]: value,
+    });
+  };
 
   const AllSexualAndGenderIdentities = [
     // LGBTQIA+
@@ -259,8 +281,8 @@ export default function ContactForm() {
   ];
 
   return (
-    <div className="flex flex-col w-full h-[80vh]">
-      <Card className="max-w-full w-[340px] h-[80vh]">
+    <div className="flex flex-col w-full h-[85vh] dark:text-white">
+      <Card className="max-w-full w-[340px] h-[85vh]">
         <CardBody className="overflow-hidden">
           <Tabs
             fullWidth
@@ -271,7 +293,7 @@ export default function ContactForm() {
           >
             <Tab key="call" title="Get Call Support">
               <form
-                className="flex flex-col gap-4 h-max"
+                className="flex flex-col gap-4 h-max dark:text-white"
                 onSubmit={handleSubmit2}
               >
                 <Input
@@ -387,6 +409,17 @@ export default function ContactForm() {
                     </SelectItem>
                   ))}
                 </Select>
+
+                <Input
+                  label="Upload your previous Medical Record"
+                  placeholder="Upload File"
+                  type="file"
+                  name="file"
+                  onChange={(e) => {
+                    setFile(e.target.files?.[0]);
+                  }}
+                />
+
                 <p className="text-center text-small">
                   Discuss your concern with us
                 </p>
