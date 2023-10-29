@@ -8,7 +8,7 @@ import {
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
+
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
 
@@ -114,9 +114,9 @@ export const Navbar = () => {
               <Link
                 color={
                   index === 2
-                    ? "primary"
+                    ? "foreground"
                     : index === siteConfig.navMenuItems.length - 1
-                    ? "danger"
+                    ? "foreground"
                     : "foreground"
                 }
                 href={item.href}

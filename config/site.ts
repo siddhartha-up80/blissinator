@@ -13,14 +13,7 @@ export const siteConfig = {
       label: "About",
       href: "/about",
     },
-    {
-      label: "Services",
-      href: "/services",
-    },
-    {
-      label: "Reviews",
-      href: "/reviews",
-    },
+    
 
     {
       label: "Blogs",
@@ -30,10 +23,7 @@ export const siteConfig = {
       label: "FAQs",
       href: "/faqs",
     },
-    {
-      label: "Join Us",
-      href: "/join-us",
-    },
+   
 
     {
       label: "Contact Us",
@@ -49,14 +39,6 @@ export const siteConfig = {
       label: "About",
       href: "/about",
     },
-    {
-      label: "Services",
-      href: "/services",
-    },
-    {
-      label: "Reviews",
-      href: "/reviews",
-    },
 
     {
       label: "Blogs",
@@ -65,10 +47,6 @@ export const siteConfig = {
     {
       label: "FAQs",
       href: "/faqs",
-    },
-    {
-      label: "Join Us",
-      href: "/join-us",
     },
 
     {

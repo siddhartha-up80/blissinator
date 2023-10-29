@@ -278,27 +278,27 @@ const topics = [
                   <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-700">
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-purple-400">
                       <h3 className="text-xl font-semibold tracki">
-                        Fill the form on the "Get Call Support" tab.
+                        Fill the form on the &quot;Get Call Support&quot; tab.
                       </h3>
 
                       <p className="mt-3">
                         Fill out the form with your name, email, phone number,
                         preferred call timings, and select your gender identity.
-                        Click the "Bliss Up" button to request call support. Our
-                        team will get in touch with you shortly.
+                        Click the &quot;Bliss Up&quot; button to request call
+                        support. Our team will get in touch with you shortly.
                       </p>
                     </div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-purple-400">
                       <h3 className="text-xl font-semibold tracki">
-                        If You Want to Book a Session: Fill the form on "Book
-                        Session" tab.
+                        If You Want to Book a Session: Fill the form on
+                        &quot;Book Session&quot; tab.
                       </h3>
 
                       <p className="mt-3">
                         Fill out the form with your name, email, phone number,
                         your concern or reason for the session, and select your
-                        gender identity. Click the "Bliss Up" button to book a
-                        session.
+                        gender identity. Click the &quot;Bliss Up&quot; button to
+                        book a session.
                       </p>
                     </div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-purple-400">
