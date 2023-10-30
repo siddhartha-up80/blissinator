@@ -1,47 +1,30 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 import { Card, CardBody, CardFooter, Image, Button } from "@nextui-org/react";
-import TabsComponent from '@/components/tabs/tabs';
+import TabsComponent from "@/components/tabs/tabs";
 import { Chip } from "@nextui-org/react";
-import ContactForm from '@/components/contactform';
-import Link from 'next/link';
-import Head from 'next/head';
-
-
-
+import ContactForm from "@/components/contactform";
+import Link from "next/link";
 
 
 const Page = () => {
-
-
-
-const topics = [
-  "Depression",
-  "Anxiety",
-  "Relationship issues",
-  "Grief",
-  "Alcohol/Substance addiction",
-  "Post-Traumatic stress",
-  "Study-related concerns",
-  "Eating/Sleep-related issues",
-  "Job/Career concerns",
-];
-
-
-
+  const topics = [
+    "Depression",
+    "Anxiety",
+    "Relationship issues",
+    "Grief",
+    "Alcohol/Substance addiction",
+    "Post-Traumatic stress",
+    "Study-related concerns",
+    "Eating/Sleep-related issues",
+    "Job/Career concerns",
+  ];
 
   return (
     <div className="max-w-[100vw]">
-      <Head>
-        <title>
-          Blissinator | Mental Health Counseling for Students and Everyone
-        </title>
-        <meta
-          name="description"
-          content="Your trusted destination for professional mental health counseling. We offer students, individuals and relationship people counseling services, helping you improve your emotional well-being. Get the support you need to lead a happier and more fulfilling life."
-        />
-      </Head>
+
+
       <>
         {/* component */}
         <div className=" bg-purple-800 dark:bg-purple-900 flex items-center md:px-12 px-5 text-white">
@@ -80,6 +63,7 @@ const topics = [
           </section>
         </div>
       </>
+
       {/* steps component */}
       <>
         <div className="flex justify-center items-center ">
@@ -297,8 +281,8 @@ const topics = [
                       <p className="mt-3">
                         Fill out the form with your name, email, phone number,
                         your concern or reason for the session, and select your
-                        gender identity. Click the &quot;Bliss Up&quot; button to
-                        book a session.
+                        gender identity. Click the &quot;Bliss Up&quot; button
+                        to book a session.
                       </p>
                     </div>
                     <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-purple-400">
@@ -411,6 +395,6 @@ const topics = [
       {/* book session */}
     </div>
   );
-}
+};
 
-export default Page
+export default Page;

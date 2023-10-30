@@ -5,7 +5,7 @@ export const POST = async (req: any) => {
     
     const data = await req.formData();
     const file = data.get('file')
-
+    
     if(!file){
         return NextResponse.json(({message: 'No file uploaded'}), {status: 400})
     } 
