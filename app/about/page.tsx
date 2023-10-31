@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutPage() {
   return (
     <div>
@@ -66,16 +68,15 @@ export default function AboutPage() {
 
       {/* founders */}
       <>
-        <section className="light:text-gray-600 body-font">
+        <section className="light: body-font">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-20">
-              <h1 className="text-2xl font-medium title-font mb-4 light:text-gray-900">
+              <h1 className="text-2xl font-medium title-font mb-4 light:">
                 OUR FOUNDERS
               </h1>
               <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-                Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-                gentrify, subway tile poke farm-to-table. Franzen you probably
-                haven&apos;t heard of them.
+                We are expanding our experience by building a counseling
+                platform that enables people to resolve issues efficiently.
               </p>
             </div>
             <div className="flex flex-wrap -m-4 justify-center">
@@ -87,13 +88,12 @@ export default function AboutPage() {
                     src="https://source.unsplash.com/random?girl,portrait,cute=3"
                   />
                   <div className="w-full">
-                    <h2 className="title-font font-medium text-lg light:text-gray-900">
+                    <h2 className="title-font font-medium text-lg light:">
                       Siddhartha Singh
                     </h2>
                     <h3 className="text-gray-500 mb-3">Full-Stack Developer</h3>
                     <p className="mb-4">
-                      DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                      pack vaporware.
+                      Final Year Student at VIT Bhopal University
                     </p>
                     <span className="inline-flex">
                       <a className="text-gray-500">
@@ -148,13 +148,12 @@ export default function AboutPage() {
                     src="https://source.unsplash.com/random?girl,portrait,cute=4"
                   />
                   <div className="w-full">
-                    <h2 className="title-font font-medium text-lg light:text-gray-900">
-                      Krapansh Srivastava
+                    <h2 className="title-font font-medium text-lg light:">
+                     Siddhartha Singh
                     </h2>
-                    <h3 className="text-gray-500 mb-3">Full-Stack Developer</h3>
+                    <h3 className="text-gray-500 mb-3">Back-End Developer</h3>
                     <p className="mb-4">
-                      DIY tote bag drinking vinegar cronut adaptogen squid fanny
-                      pack vaporware.
+                      Final Year Student at VIT Bhopal University
                     </p>
                     <span className="inline-flex">
                       <a className="text-gray-500">
@@ -205,6 +204,171 @@ export default function AboutPage() {
         </section>
       </>
       {/* founders */}
+
+      {/* our story  */}
+      <>
+        {/* component */}
+        <div
+          className="flex items-center md:px-12 px-5 text-white"
+          style={{
+            backgroundImage:
+              "url(https://source.unsplash.com/random?girl,woman,cute=4)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        >
+          <section className="bg-cover bg-center py-24 w-full">
+            <div className="container mx-auto text-left dark:text-white">
+              <div className="flex items-center justify-end mb-5 flex-col md:flex-row ">
+                <div className="md:w-[40vw] bg-purple-900 dark:text-white p-8 px-10 rounded-xl md:mr-10">
+                  <h1 className="text-4xl font-medium mb-6">Our Story</h1>
+                  <p className="text-medium ">
+                    After 4 years of self suffering, we are expanding our
+                    experience by building a counseling platform that enables
+                    people to resolve issues efficiently. Not all issues can be
+                    resolved through ignorance, especially when they have a long
+                    history, for example rejections. A short-term counselling
+                    can resolve these issues by helping you uncover matters that
+                    impact your mental health and find methods to help you cope
+                    and build resilience.
+                  </p>{" "}
+                  <p className="text-medium mt-5">
+                    On this platform, we help providing method to connect
+                    counsellers with those with a history in suffering from
+                    mental illness before and fight back, girl rejections and
+                    social shyness or an student suffering from a placement
+                    rejections, those who are recovered from all of these will
+                    help you to rise.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </>
+      {/* our story  */}
+
+      {/* our suffering story */}
+      <>
+        <section className=" body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-col text-center w-full mb-20">
+              <h2 className="text-xs text-purple-500 tracking-widest font-medium title-font mb-1">
+                GET INSPIRATON BY US
+              </h2>
+              <h1 className="sm:text-3xl text-2xl font-medium title-font ">
+                Our Sufferings and how we inspire others
+              </h1>
+            </div>
+            <div className="flex flex-wrap -m-4">
+              <div className="p-4 md:w-1/3">
+                <div className="flex rounded-lg h-full bg-purple-100 dark:bg-purple-900 p-8 flex-col shadow-lg">
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-purple-500 text-white flex-shrink-0">
+                      <svg
+                        viewBox="0 0 448 512"
+                        fill="currentColor"
+                        height="1em"
+                        width="1em"
+                      >
+                        <path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm192 112c0 26.5-21.5 48-48 48s-48-21.5-48-48 21.5-48 48-48 48 21.5 48 48zm-16 104c0-30.9 25.1-56 56-56s56 25.1 56 56v102.1c0 36.4-29.5 65.9-65.9 65.9-17.5 0-34.3-6.9-46.6-19.3L184.8 342l-28.1 56.3c-7.9 15.8-27.1 22.2-42.9 14.3s-22.2-27.1-14.3-42.9l48-96c4.6-9.2 13.3-15.6 23.5-17.3s20.5 1.7 27.8 9l41.2 41.3V248z" />
+                      </svg>
+                    </div>
+                    <h2 className=" text-lg title-font font-medium ">
+                      Experts
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-center">
+                      Provide quality mental health services and support by
+                      carefully vetting and selecting a team of experts
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3">
+                <div className="flex rounded-lg h-full bg-purple-100  dark:bg-purple-900 p-8 flex-col shadow-lg">
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-purple-500 text-white flex-shrink-0">
+                      <svg
+                        viewBox="0 0 448 512"
+                        fill="currentColor"
+                        height="1em"
+                        width="1em"
+                      >
+                        <path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm192 112c0 26.5-21.5 48-48 48s-48-21.5-48-48 21.5-48 48-48 48 21.5 48 48zm-16 104c0-30.9 25.1-56 56-56s56 25.1 56 56v102.1c0 36.4-29.5 65.9-65.9 65.9-17.5 0-34.3-6.9-46.6-19.3L184.8 342l-28.1 56.3c-7.9 15.8-27.1 22.2-42.9 14.3s-22.2-27.1-14.3-42.9l48-96c4.6-9.2 13.3-15.6 23.5-17.3s20.5 1.7 27.8 9l41.2 41.3V248z" />
+                      </svg>
+                    </div>
+                    <h2 className=" text-lg title-font font-medium">
+                      The Rejections
+                    </h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-center">
+                      Respond and treat every individual with respect and
+                      dignity, while empowering them to have their own voice and
+                      encouraging them to participate actively in caring for
+                      their own mental peace
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4 md:w-1/3">
+                <div className="flex rounded-lg h-full bg-purple-100  dark:bg-purple-900 p-8 flex-col shadow-lg">
+                  <div className="flex items-center justify-center mb-3">
+                    <div className="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-purple-500 text-white flex-shrink-0">
+                      <svg
+                        viewBox="0 0 448 512"
+                        fill="currentColor"
+                        height="1em"
+                        width="1em"
+                      >
+                        <path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm192 112c0 26.5-21.5 48-48 48s-48-21.5-48-48 21.5-48 48-48 48 21.5 48 48zm-16 104c0-30.9 25.1-56 56-56s56 25.1 56 56v102.1c0 36.4-29.5 65.9-65.9 65.9-17.5 0-34.3-6.9-46.6-19.3L184.8 342l-28.1 56.3c-7.9 15.8-27.1 22.2-42.9 14.3s-22.2-27.1-14.3-42.9l48-96c4.6-9.2 13.3-15.6 23.5-17.3s20.5 1.7 27.8 9l41.2 41.3V248z" />
+                      </svg>
+                    </div>
+                    <h2 className=" text-lg title-font font-medium">People</h2>
+                  </div>
+                  <div className="flex-grow">
+                    <p className="leading-relaxed text-base text-center">
+                      Continually learning, researching and creating more
+                      efficient methods to reach and serve the community
+                      optimally
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+      {/* our suffering story */}
+
+      {/* footer banner */}
+      <>
+        <div className="p-6 py-12  dark:bg-purple-900 text-white bg-purple-700">
+          <div className="container mx-auto">
+            <div className="flex flex-col lg:flex-row items-center justify-between">
+              <h2 className="text-center text-4xl tracki font-bold">
+                Ask Us Any Question !
+              </h2>
+              <div className="space-x-2 text-center py-2 lg:py-0">
+                <span>
+                  View <span className="font-bold text-lg">QnA</span> section or
+                  use our <span className="font-bold text-lg">ChatBot</span>
+                </span>
+              </div>
+              <Link
+                href="/faqs"
+                rel="noreferrer noopener"
+                className="px-5 mt-4 lg:mt-0 py-3 rounded-md block dark:bg-gray-50 bg-white text-purple-900 dark:border-gray-400 shadow-lg hover:bg-purple-400 hover:text-white"
+              >
+                Ask Us Now
+              </Link>
+            </div>
+          </div>
+        </div>
+      </>
+      {/* footer banner */}
     </div>
   );
 }

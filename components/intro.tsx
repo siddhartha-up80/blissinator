@@ -405,20 +405,20 @@ const Intro = () => {
 
       <>
         {/* book now secion */}
-        <div className="w-full   bg-purple-800 shadow-xl shadow-indigo-200 py-10 px-20 flex justify-between items-center">
-          <p className=" text-white">
+        <div className=" bg-purple-800 shadow-xl shadow-indigo-200 py-10  flex justify-between items-center">
+          <p className=" text-white px-10">
             {" "}
             <span className="text-4xl font-medium">
-              Still Confused ? Try us once !
+              Still Confused ? Try us once!
             </span>{" "}
             <br />{" "}
             <span className="text-lg">Book your Consultation Today ! </span>
           </p>
-          <Link href="/counselling">
+          <Link href="/counselling" className="pr-5">
             {" "}
             <Button
               fullWidth
-              className="py-4 px-12 rounded-lg font-medium text-white shadow-xl  hover:bg-purple-200 hover:text-gray-800 duration-150  bg-purple-500"
+              className="py-4  rounded-lg font-medium text-white shadow-xl  hover:bg-purple-200 hover:text-gray-800 duration-150  bg-purple-500"
             >
               Read More{" "}
             </Button>
