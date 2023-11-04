@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { Dial } from "@/components/ui/SpeedDial";
 
 export default function AboutPage() {
   return (
@@ -22,11 +24,12 @@ export default function AboutPage() {
           <div className="container m-auto px-6  md:px-12 xl:px-6">
             <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
               <div className="md:5/12 lg:w-5/12">
-                <img
+                <Image
                   src="https://source.unsplash.com/random?girl,woman,cute=2"
                   alt="image"
                   loading="lazy"
-                  width=""
+                  height="300"
+                  width="300"
                   className="object-cover rounded-lg shadow-2xl max-h-[40vh] w-[40vw]"
                 />
               </div>
@@ -81,8 +84,10 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-wrap -m-4 justify-center">
               <div className="p-4 lg:w-1/4 md:w-1/2">
-                <div className="h-full flex flex-col items-center text-center">
-                  <img
+                <div className="h-full flex flex-col items-center text-center object-cover object-center">
+                  <Image
+                    height="300"
+                    width="300"
                     alt="team"
                     className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
                     src="https://source.unsplash.com/random?girl,portrait,cute=3"
@@ -141,15 +146,17 @@ export default function AboutPage() {
               </div>
 
               <div className="p-4 lg:w-1/4 md:w-1/2">
-                <div className="h-full flex flex-col items-center text-center">
-                  <img
+                <div className="h-full flex flex-col items-center text-center object-cover object-center">
+                  <Image
                     alt="team"
+                    height="300"
+                    width="300"
                     className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
                     src="https://source.unsplash.com/random?girl,portrait,cute=4"
                   />
                   <div className="w-full">
                     <h2 className="title-font font-medium text-lg light:">
-                     Siddhartha Singh
+                      Siddhartha Singh
                     </h2>
                     <h3 className="text-gray-500 mb-3">Back-End Developer</h3>
                     <p className="mb-4">
@@ -369,6 +376,9 @@ export default function AboutPage() {
         </div>
       </>
       {/* footer banner */}
+      <div className="">
+        <Dial />
+      </div>
     </div>
   );
 }

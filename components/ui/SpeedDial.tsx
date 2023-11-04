@@ -1,12 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  Button,
-} from "@nextui-org/react";
+
 import Chat from "../chat/Chat";
 
 export function Dial() {
@@ -25,7 +20,7 @@ export function Dial() {
   return (
     <div className="fixed bottom-16 right-5">
       {open && <Chat />}
-      <div className="fixed bottom-10 right-5 mt-10 rounded-full dark:bg-purple-500 cursor-pointer">
+      <div className="fixed bottom-10 right-5 mt-10 rounded-full  cursor-pointer">
         <div
           onClick={chaton}
           className="flex justify-center items-center flex-col mt-5"

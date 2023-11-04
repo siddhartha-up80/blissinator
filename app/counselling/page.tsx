@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
-import { Card, CardBody, CardFooter, Image, Button } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Button } from "@nextui-org/react";
+import Image from "next/image";
 import TabsComponent from "@/components/tabs/tabs";
 import { Chip } from "@nextui-org/react";
 import ContactForm from "@/components/contactform";
 import Link from "next/link";
+import { Dial } from "@/components/ui/SpeedDial";
 
 
 const Page = () => {
@@ -23,8 +25,6 @@ const Page = () => {
 
   return (
     <div className="max-w-[100vw]">
-
-
       <>
         {/* component */}
         <div className=" bg-purple-800 dark:bg-purple-900 flex items-center md:px-12 px-5 text-white">
@@ -52,7 +52,9 @@ const Page = () => {
                   </a>
                 </div>
                 <div className="md:w-1/2 md:pl-16 py-10">
-                  <img
+                  <Image
+                    height="300"
+                    width="300"
                     src="https://source.unsplash.com/random?girl,woman,cute"
                     className="h-[50vh] w-full object-cover rounded-xl"
                     alt="Layout Image"
@@ -185,6 +187,8 @@ const Page = () => {
               className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1 md:w-[30vw] md:mx-20"
             >
               <Image
+                height="300"
+                width="300"
                 src="https://source.unsplash.com/random/900x700/?student=2"
                 alt=""
                 className="mx-auto rounded-lg shadow-lg dark:bg-gray-500"
@@ -393,6 +397,10 @@ const Page = () => {
       </>
 
       {/* book session */}
+
+      <div className="">
+        <Dial />
+      </div>
     </div>
   );
 };

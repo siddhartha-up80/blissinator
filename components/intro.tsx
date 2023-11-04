@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import { Card, CardBody, CardFooter, Image, Button } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, Button } from "@nextui-org/react";
 import Link from "next/link";
-
-
+import Image from "next/image";
 
 const Intro = () => {
   const list = [
@@ -134,9 +133,8 @@ const Intro = () => {
                     >
                       <CardBody>
                         <Image
-                          shadow="sm"
-                          radius="lg"
-                          width="100%"
+                          height="300"
+                          width="300"
                           alt={item.title}
                           className="w-full object-cover h-[30vh]"
                           src={item.img}
@@ -273,17 +271,14 @@ const Intro = () => {
                   </div>
                 </div>
               </div>
-              <Card
-                isPressable
-                aria-hidden="true"
-                className="mt-10 lg:mt-0 isPressable"
-              >
-                <Image
-                  src="https://source.unsplash.com/random/900x700/?student"
-                  alt=""
-                  className="mx-auto rounded-lg shadow-lg dark:bg-gray-500"
-                />
-              </Card>
+
+              <Image
+                height="300"
+                width="300"
+                src="https://source.unsplash.com/random/900x700/?student"
+                alt=""
+                className="mx-auto rounded-lg shadow-lg dark:bg-gray-500  object-cover object-center mt-10 lg:mt-0 lg:col-start-0 lg:row-start-0  "
+              />
             </div>
             <div>
               <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
@@ -387,16 +382,14 @@ const Intro = () => {
                     </div>
                   </div>
                 </div>
-                <Card
-                  isPressable
-                  className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1"
-                >
-                  <Image
-                    src="https://source.unsplash.com/random/900x700/?student=2"
-                    alt=""
-                    className="mx-auto rounded-lg shadow-lg dark:bg-gray-500"
-                  />
-                </Card>
+
+                <Image
+                  height="300"
+                  width="300"
+                  src="https://source.unsplash.com/random/900x700/?student=2"
+                  alt=""
+                  className="mx-auto rounded-lg shadow-lg dark:bg-gray-500  object-cover object-center mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1  "
+                />
               </div>
             </div>
           </div>
@@ -427,7 +420,6 @@ const Intro = () => {
         </div>
         {/* book now secion */}
       </>
-      
     </div>
   );
 };
