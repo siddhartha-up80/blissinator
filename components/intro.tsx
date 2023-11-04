@@ -5,6 +5,7 @@ import { Card, CardBody, CardFooter, Image, Button } from "@nextui-org/react";
 import Link from "next/link";
 
 
+
 const Intro = () => {
   const list = [
     {
@@ -426,6 +427,7 @@ const Intro = () => {
         </div>
         {/* book now secion */}
       </>
+      
     </div>
   );
 };

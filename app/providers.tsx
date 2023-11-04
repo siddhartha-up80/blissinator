@@ -5,6 +5,7 @@ import { NextUIProvider } from "@nextui-org/system";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ThemeProviderProps } from "next-themes/dist/types";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { MessagesProvider } from "@/context/messages";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -18,7 +19,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
     <NextUIProvider>
       <NextThemesProvider {...themeProps}>
         <QueryClientProvider client={queryClient}>
-          {children}
+          <MessagesProvider>{children}</MessagesProvider>
         </QueryClientProvider>
       </NextThemesProvider>
     </NextUIProvider>
